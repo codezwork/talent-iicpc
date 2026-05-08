@@ -121,7 +121,7 @@ export default function Home() {
         
         {/* YouTube Background (Object-Cover Math Hack) */}
         <iframe 
-          src="https://www.youtube-nocookie.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1" 
+          src="https://www.youtube.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1" 
           title="Codefest 2026 recap" 
           loading="eager" 
           allow="autoplay; encrypted-media; picture-in-picture" 
