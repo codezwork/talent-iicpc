@@ -29,8 +29,8 @@ export default function Home() {
   const [iframeSrc, setIframeSrc] = useState<string>("");
 
   useEffect(() => {
-    // Dynamically inject origin to bypass YouTube bot detection on Vercel
-    setIframeSrc(`https://www.youtube.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1&origin=${window.location.origin}&widget_referrer=${window.location.href}`);
+    // Switch to youtube-nocookie.com to bypass cross-origin bot detection on Vercel
+    setIframeSrc(`https://www.youtube-nocookie.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1&origin=${window.location.origin}&widget_referrer=${window.location.href}`);
   }, []);
 
   useGSAP(() => {
@@ -131,7 +131,8 @@ export default function Home() {
             src={iframeSrc} 
             title="Codefest 2026 recap" 
             loading="eager" 
-            allow="autoplay; encrypted-media; picture-in-picture" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             tabIndex={-1}
             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125 opacity-80 pointer-events-none"
           />
