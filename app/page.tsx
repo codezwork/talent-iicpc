@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -26,6 +26,12 @@ export default function Home() {
   
   // We use state instead of useRef so useGSAP can react when the 3D canvas populates it
   const [coinGroup, setCoinGroup] = useState<THREE.Group | null>(null);
+  const [iframeSrc, setIframeSrc] = useState<string>("");
+
+  useEffect(() => {
+    // Dynamically inject origin to bypass YouTube bot detection on Vercel
+    setIframeSrc(`https://www.youtube.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1&origin=${window.location.origin}&widget_referrer=${window.location.href}`);
+  }, []);
 
   useGSAP(() => {
     if (!coinGroup) return;
@@ -120,14 +126,16 @@ export default function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black">
         
         {/* YouTube Background (Object-Cover Math Hack) */}
-        <iframe 
-          src="https://www.youtube.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1" 
-          title="Codefest 2026 recap" 
-          loading="eager" 
-          allow="autoplay; encrypted-media; picture-in-picture" 
-          tabIndex={-1}
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125 opacity-80 pointer-events-none"
-        />
+        {iframeSrc && (
+          <iframe 
+            src={iframeSrc} 
+            title="Codefest 2026 recap" 
+            loading="eager" 
+            allow="autoplay; encrypted-media; picture-in-picture" 
+            tabIndex={-1}
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125 opacity-80 pointer-events-none"
+          />
+        )}
 
         {/* Overlay */}
         <div className="absolute inset-0 md:bg-white/5"></div>
