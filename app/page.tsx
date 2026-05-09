@@ -21,17 +21,16 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+// 1. HARDCODE THE URL OUTSIDE OR INSIDE THE COMPONENT (Static)
+// Added the fresh 'si' parameter and 'start=2' while keeping all background optimizations
+const BACKGROUND_VIDEO_SRC = "https://www.youtube-nocookie.com/embed/CP83T01ECZA?si=KNOQCxUwsCdUChkd&start=2&autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1";
+
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   
-  // We use state instead of useRef so useGSAP can react when the 3D canvas populates it
+  // 2. ONLY KEEP THE 3D COIN STATE. 
+  // (Removed iframeSrc state and useEffect)
   const [coinGroup, setCoinGroup] = useState<THREE.Group | null>(null);
-  const [iframeSrc, setIframeSrc] = useState<string>("");
-
-  useEffect(() => {
-    // Switch to youtube-nocookie.com to bypass cross-origin bot detection on Vercel
-    setIframeSrc(`https://www.youtube-nocookie.com/embed/CP83T01ECZA?autoplay=1&mute=1&loop=1&playlist=CP83T01ECZA&controls=0&modestbranding=1&showinfo=0&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1&origin=${window.location.origin}&widget_referrer=${window.location.href}`);
-  }, []);
 
   useGSAP(() => {
     if (!coinGroup) return;
@@ -39,7 +38,7 @@ export default function Home() {
     let mm = gsap.matchMedia();
 
     // ------------------------------------
-    // DESKTOP LOGIC (Current Flawless Code)
+    // DESKTOP LOGIC
     // ------------------------------------
     mm.add("(min-width: 768px)", () => {
       gsap.set(coinGroup.position, { x: -5, y: 0, z: 0 });
@@ -76,10 +75,9 @@ export default function Home() {
     });
 
     // ------------------------------------
-    // MOBILE LOGIC (Centered & Elevated)
+    // MOBILE LOGIC
     // ------------------------------------
     mm.add("(max-width: 767px)", () => {
-      // Elevated above text, centered horizontally
       gsap.set(coinGroup.position, { x: 0, y: 7, z: 0 });
       gsap.set(coinGroup.rotation, { x: Math.PI / 2, y: 0, z: 0 }); 
 
@@ -102,7 +100,6 @@ export default function Home() {
       const currentZ = coinGroup.rotation.z || 0;
       const targetZ = Math.ceil(currentZ / (Math.PI * 2)) * (Math.PI * 2) || (Math.PI * 2);
 
-      // Stage 1 to 2: Diagonal Flip happens in-place (elevated)
       tl.to(coinGroup.position, { x: 0, y: 3.5, duration: 1, ease: "power1.inOut" }, 0);
       tl.to(coinGroup.rotation, {
         x: Math.PI * 4.5, z: targetZ, 
@@ -110,12 +107,11 @@ export default function Home() {
         duration: 1, ease: "power1.inOut"
       }, 0);
 
-      // Stage 2 to 3: Brings it closer, drops slightly down to center
       tl.to(coinGroup.position, { x: 0, y: 2, z: 4, duration: 1, ease: "power1.inOut" }, 0.85);
       tl.to(coinGroup.rotation, { z: targetZ + (Math.PI * 4), duration: 1, ease: "power1.inOut" }, 0.85);
     });
 
-    return () => mm.revert(); // Cleanup matchMedia on unmount
+    return () => mm.revert(); 
 
   }, { scope: containerRef, dependencies: [coinGroup] });
 
@@ -125,18 +121,17 @@ export default function Home() {
       {/* Fixed 3D Canvas Background */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black">
         
-        {/* YouTube Background (Object-Cover Math Hack) */}
-        {iframeSrc && (
-          <iframe 
-            src={iframeSrc} 
-            title="Codefest 2026 recap" 
-            loading="eager" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            tabIndex={-1}
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125 opacity-80 pointer-events-none"
-          />
-        )}
+        {/* 3. STATICALLY RENDERED YOUTUBE BACKGROUND */}
+        <iframe 
+          src={BACKGROUND_VIDEO_SRC} 
+          title="Codefest 2026 recap" 
+          loading="eager" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          tabIndex={-1}
+          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125 opacity-80 pointer-events-none border-none"
+          allowFullScreen
+        />
 
         {/* Overlay */}
         <div className="absolute inset-0 md:bg-white/5"></div>
