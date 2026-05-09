@@ -112,7 +112,7 @@ export default function FinalCTA() {
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="FIRST NAME" 
-                className={`flex-1 h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors ${errors.firstName ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
+                className={`w-full md:flex-1 h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors ${errors.firstName ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
               />
               <input 
                 type="text" 
@@ -120,7 +120,7 @@ export default function FinalCTA() {
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="LAST NAME" 
-                className={`flex-1 h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors ${errors.lastName ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
+                className={`w-full md:flex-1 h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors ${errors.lastName ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
               />
             </div>
             <input 

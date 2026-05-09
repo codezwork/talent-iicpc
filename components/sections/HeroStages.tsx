@@ -64,25 +64,25 @@ export default function HeroStages() {
           <div className="reveal-group flex flex-col items-end gap-2">
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-slate-900">
                 Finding top
               </h1>
             </div>
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-slate-900">
                 engineering talent
               </h1>
             </div>
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-slate-900">
                 is harder than it
               </h1>
             </div>
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-slate-900">
                 should be.
               </h1>
             </div>
@@ -107,13 +107,13 @@ export default function HeroStages() {
           <div className="reveal-group flex flex-col items-start gap-2">
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-white" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-[#0056D2]/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-white">
+              <h1 className="reveal-text opacity-0 bg-[#0056D2]/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-white">
                 We've already done
               </h1>
             </div>
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-white" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-[#0056D2]/95 px-4 py-2 text-4xl md:text-6xl font-light tracking-tight leading-none text-white">
+              <h1 className="reveal-text opacity-0 bg-[#0056D2]/95 px-4 py-2 text-[1.5rem] md:text-6xl font-light tracking-tight leading-none text-white">
                 the filtering.
               </h1>
             </div>
@@ -121,15 +121,15 @@ export default function HeroStages() {
 
           <div className="flex flex-col gap-6 mt-2 bg-white/95 p-6 border-l-4 border-[#0056D2] shadow-xl">
             <div>
-              <div className="text-3xl font-bold text-slate-900">18,000+</div>
+              <div className="text-1xl font-bold text-slate-900">18,000+</div>
               <div className="text-slate-500 text-[10px] uppercase tracking-[0.15em] font-medium">Total Participants</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900">120+</div>
+              <div className="text-1xl font-bold text-slate-900">120+</div>
               <div className="text-slate-500 text-[10px] uppercase tracking-[0.15em] font-medium">Colleges Represented</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#0056D2]">0.8%</div>
+              <div className="text-1xl font-bold text-[#0056D2]">0.8%</div>
               <div className="text-slate-500 text-[10px] uppercase tracking-[0.15em] font-medium">Reach Finals</div>
             </div>
           </div>
@@ -147,13 +147,13 @@ export default function HeroStages() {
           <div className="reveal-group flex flex-col items-center gap-2">
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-6 py-2 text-5xl md:text-7xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-6 py-2 text-[2.25rem] md:text-7xl font-light tracking-tight leading-none text-slate-900">
                 Stop searching.
               </h1>
             </div>
             <div className="reveal-wrapper relative inline-block overflow-hidden">
               <div className="reveal-block absolute inset-0 z-10 bg-[#0056D2]" style={{ transform: "scaleX(0)" }}></div>
-              <h1 className="reveal-text opacity-0 bg-white/95 px-6 py-2 text-5xl md:text-7xl font-light tracking-tight leading-none text-slate-900">
+              <h1 className="reveal-text opacity-0 bg-white/95 px-6 py-2 text-[2.25rem] md:text-7xl font-light tracking-tight leading-none text-slate-900">
                 Start hiring.
               </h1>
             </div>
