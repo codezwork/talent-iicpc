@@ -11,8 +11,9 @@ import HiringPainTable from "@/components/sections/HiringPainTable";
 import StatsDashboard from "@/components/sections/StatsDashboard";
 import PlacementOutcomes from "@/components/sections/PlacementOutcomes";
 import SponsorWall from "@/components/sections/SponsorWall";
+import VideoTestimonials from "@/components/sections/VideoTestimonials";
+import StudentMarquee from "@/components/sections/StudentMarquee";
 import SpeedMetrics from "@/components/sections/SpeedMetrics";
-import ROICalculator from "@/components/sections/ROICalculator";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -151,8 +152,9 @@ export default function Home() {
         <StatsDashboard />
         <PlacementOutcomes />
         <SponsorWall />
+        <VideoTestimonials />
+        <StudentMarquee />
         <SpeedMetrics />
-        <ROICalculator />
         <FinalCTA />
         <Footer />
       </div>
