@@ -5,9 +5,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Using the provided YouTube URL for all mock entries, with enablejsapi=1 appended
 const YOUTUBE_URL_1 = "https://www.youtube-nocookie.com/embed/RKXJdB6Vzps?si=BVBKY3jQqmHa5eR3&start=1&enablejsapi=1";
-const YOUTUBE_URL_2 = "https://www.youtube-nocookie.com/embed/uR7IMgwQNtU?si=zWFhH0c7ANm21SoR&amp;start=2&enablejsapi=1";
+const YOUTUBE_URL_2 = "https://www.youtube-nocookie.com/embed/8Grk0fA1A_s?si=Jta5EP5CT4JAwFCl&amp;start=1&enablejsapi=1";
 const YOUTUBE_URL_3 = "https://www.youtube-nocookie.com/embed/vSTQcIzM55s?si=v_usr_ofnc-UD68b&amp;start=2&enablejsapi=1";
-const YOUTUBE_URL_4 = "https://www.youtube-nocookie.com/embed/vSTQcIzM55s?si=v_usr_ofnc-UD68b&amp;start=2&enablejsapi=1";
+const YOUTUBE_URL_4 = "https://www.youtube-nocookie.com/embed/uR7IMgwQNtU?si=zWFhH0c7ANm21SoR&amp;start=2&enablejsapi=1";
 
 const testimonials = [
   {
@@ -21,7 +21,7 @@ const testimonials = [
   {
     id: 2,
     videoSrc: YOUTUBE_URL_2,
-    name: "Shreyan Ray",
+    name: "Teetat",
     cfRank: "Master",
     event: "IICPC QunatFest'25 Winner",
     achievement: "Quant Researcher @ Jane Street",
@@ -36,8 +36,8 @@ const testimonials = [
   },
   {
     id: 4,
-    videoSrc: YOUTUBE_URL_1,
-    name: "Sneha Gupta",
+    videoSrc: YOUTUBE_URL_4,
+    name: "Shreyan Ray",
     cfRank: "Grandmaster",
     event: "IICPC Finals 2026",
     achievement: "Trading Analyst @ Citadel",
