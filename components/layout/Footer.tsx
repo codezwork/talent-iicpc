@@ -94,7 +94,7 @@ const MambaMediaEgg = () => {
         <span className={`w-2 h-2 rounded-full animate-pulse transition-colors duration-300 ${isHovered ? 'bg-[#ff0000]' : 'bg-green-400'}`} />
         
         {/* Text Container */}
-        <div className="relative h-[1.2em] flex items-center font-medium uppercase tracking-widest min-w-[140px]">
+        <div className="relative h-[1.2em] flex items-center font-medium uppercase tracking-widest min-w-[180px]">
           {/* Default Text */}
           <span 
             className={`absolute left-0 whitespace-nowrap transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isHovered ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}`}
