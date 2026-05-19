@@ -21,7 +21,7 @@ export default function proxy(request: NextRequest) {
     // For this mock, we will rate limit based on a general identifier or IP if available.
     // In Edge runtime, we might read the session token, but to avoid any Firebase decoding here,
     // we'll just rate limit by IP.
-    const ip = request.ip || '127.0.0.1';
+    const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
     
     // Rate Limiting (100 req / hour)
     const limit = 100;
