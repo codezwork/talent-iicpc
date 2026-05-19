@@ -48,7 +48,7 @@ export default function Header() {
             );
           })}
           {/* Desktop Portal Login */}
-          <button className="hidden md:block px-4 py-2 md:px-6 md:py-3 bg-[#0056D2] text-white hover:bg-blue-700 transition-colors font-medium rounded-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0056D2] focus-visible:ring-offset-2">
+          <button className="hidden md:block px-4 py-2 md:px-6 md:py-3 bg-[#0056D2] text-white hover:bg-blue-700 transition-colors font-medium rounded-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0056D2] focus-visible:ring-offset-2" onClick={() => window.location.href = '/login'}>
             Portal Login
           </button>
 

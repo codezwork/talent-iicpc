@@ -1,0 +1,95 @@
+
+<style>
+  .rating-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+  .score-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 20px; }
+  .score-strong { background: var(--color-background-success); color: var(--color-text-success); }
+  .score-good { background: var(--color-background-info); color: var(--color-text-info); }
+  .score-warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .score-gap { background: var(--color-background-danger); color: var(--color-text-danger); }
+  .bar-track { background: var(--color-background-secondary); border-radius: 4px; height: 6px; flex: 1; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+  .dimension-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .dimension-row:last-child { border-bottom: none; }
+  .dim-label { font-size: 13px; color: var(--color-text-primary); min-width: 180px; }
+  .dim-score { font-size: 13px; font-weight: 500; min-width: 36px; text-align: right; color: var(--color-text-secondary); }
+  .overall-score { font-size: 48px; font-weight: 500; color: var(--color-text-primary); line-height: 1; }
+  .section-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); margin-bottom: 8px; }
+  .gap-item { display: flex; gap: 8px; align-items: flex-start; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+  .gap-item:last-child { border-bottom: none; }
+  .verdict { background: var(--color-background-success); border: 0.5px solid var(--color-border-success, var(--color-border-tertiary)); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+</style>
+
+<div style="padding: 1rem 0;">
+  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">IICPC Talent Portal Security Architecture Rating</h2>
+
+  <div style="display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; margin-bottom: 20px;">
+    <div class="rating-card" style="text-align: center; min-width: 130px;">
+      <div class="section-label">Overall rating</div>
+      <div class="overall-score">8.1</div>
+      <div style="font-size: 13px; color: var(--color-text-secondary); margin-top: 4px;">/ 10</div>
+      <div style="margin-top: 10px;"><span class="score-pill score-good">Production-ready</span></div>
+    </div>
+    <div class="rating-card" style="flex: 1;">
+      <div class="section-label">Dimension scores</div>
+      <div class="dimension-row">
+        <span class="dim-label">Data access control</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 95%; background: #1D9E75;"></div></div>
+        <span class="dim-score">9.5</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Identity & auth</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 90%; background: #1D9E75;"></div></div>
+        <span class="dim-score">9.0</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Encryption at rest</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 90%; background: #1D9E75;"></div></div>
+        <span class="dim-score">9.0</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Operational provisioning</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 80%; background: #378ADD;"></div></div>
+        <span class="dim-score">8.0</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Encryption in transit</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 60%; background: #BA7517;"></div></div>
+        <span class="dim-score">6.0</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Audit & observability</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 30%; background: #E24B4A;"></div></div>
+        <span class="dim-score">3.0</span>
+      </div>
+      <div class="dimension-row">
+        <span class="dim-label">Rate limiting & abuse prevention</span>
+        <div class="bar-track"><div class="bar-fill" style="width: 20%; background: #E24B4A;"></div></div>
+        <span class="dim-score">2.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rating-card" style="margin-bottom: 12px;">
+    <div class="section-label">What the plan gets right</div>
+    <div class="gap-item"><span class="score-pill score-strong" style="flex-shrink:0;">✓ Strong</span><span>Server-side shredding is architecturally correct — browser never receives data it shouldn't see. This directly addresses the Jane Street/Optiver network-tab threat model.</span></div>
+    <div class="gap-item"><span class="score-pill score-strong" style="flex-shrink:0;">✓ Strong</span><span>Firebase Custom Claims as the tier signal is the right call. Claims are cryptographically signed by Google — impossible to spoof via local storage or cookie tampering.</span></div>
+    <div class="gap-item"><span class="score-pill score-strong" style="flex-shrink:0;">✓ Strong</span><span>AES-256-GCM envelope encryption with Cloud KMS protects sensitive PII (phone, email, salary, interview notes) even from rogue internal engineers with Firestore console access.</span></div>
+    <div class="gap-item"><span class="score-pill score-strong" style="flex-shrink:0;">✓ Strong</span><span>Single source of truth in Firestore with DENY ALL client-side rules. No fragmented tables = no synchronisation drift between tier-specific databases.</span></div>
+    <div class="gap-item"><span class="score-pill score-good" style="flex-shrink:0;">✓ Good</span><span>Concierge onboarding via Google Apps Script → Next.js → Firebase Admin is a clean, manual-but-automatable flow suitable for a small high-ticket client base.</span></div>
+  </div>
+
+  <div class="rating-card">
+    <div class="section-label">Gaps to address before launch</div>
+    <div class="gap-item"><span class="score-pill score-gap" style="flex-shrink:0;">Critical</span><span><strong>No audit logging.</strong> You need a record of every /api/candidates call — who requested it, which tier, how many records were returned, timestamp. Without this you cannot detect data exfiltration or honour DSAR/GDPR requests. Add Cloud Logging or Firestore audit trails.</span></div>
+    <div class="gap-item"><span class="score-pill score-gap" style="flex-shrink:0;">Critical</span><span><strong>No rate limiting on /api/candidates.</strong> A Diamond client could script 10,000 requests and harvest the full dataset in seconds. Add per-firm request throttling (e.g. 100 req/hr) at the API gateway or Next.js middleware level.</span></div>
+    <div class="gap-item"><span class="score-pill score-warn" style="flex-shrink:0;">Important</span><span><strong>TLS/HTTPS is assumed but not specified.</strong> The document doesn't explicitly mandate HTTPS, HSTS headers, or certificate pinning. State this clearly and enforce HSTS with at least a 1-year max-age in Next.js middleware headers.</span></div>
+    <div class="gap-item"><span class="score-pill score-warn" style="flex-shrink:0;">Important</span><span><strong>Token revocation on tier downgrade.</strong> Firebase JWTs have a 1-hour TTL. If a firm's tier is downgraded, they still have Diamond access for up to 60 minutes. Add a server-side revocation check (Firestore flag + cache invalidation) for downgrade events.</span></div>
+    <div class="gap-item"><span class="score-pill score-warn" style="flex-shrink:0;">Important</span><span><strong>DEK rotation strategy missing.</strong> The plan generates a unique DEK per document but doesn't specify how often DEKs are rotated or what happens when the KEK is rotated in Cloud KMS. Document a re-encryption job.</span></div>
+    <div class="gap-item"><span class="score-pill score-warn" style="flex-shrink:0;">Consider</span><span><strong>Candidate consent and data residency.</strong> You're storing phone numbers, personal emails, and salary expectations of real candidates. Confirm data residency (India? EU? US?) and that candidates have consented to this storage and sharing — especially for GDPR-adjacent firms like those in London.</span></div>
+  </div>
+
+  <div class="verdict" style="margin-top: 12px;">
+    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-success); margin-bottom: 4px;">Verdict: move forward — with two fixes first</div>
+    <div style="font-size: 13px; color: var(--color-text-primary);">The core architecture is sound and production-ready for a v1 launch. Before onboarding real firms, add audit logging and per-firm rate limiting — both are low-effort additions to Next.js middleware. The remaining gaps are important but can be addressed iteratively post-launch.</div>
+  </div>
+</div>
