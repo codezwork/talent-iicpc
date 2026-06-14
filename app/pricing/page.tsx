@@ -6,7 +6,17 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Link from 'next/link';
 
-const pricingTiers = [
+interface PricingTier {
+  name: string;
+  description: string;
+  price: string;
+  period?: string;
+  features: string[];
+  highlighted: boolean;
+  cta: string;
+}
+
+const pricingTiers: PricingTier[] = [
   {
     name: "Gold",
     description: "Ideal for growing companies seeking strong engineering talent.",
