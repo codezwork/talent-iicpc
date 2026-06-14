@@ -22,7 +22,7 @@ const pricingTiers: PricingTier[] = [
     description: "Ideal for growing companies seeking strong engineering talent.",
     price: "Tier 1",
     features: [
-      "Access to Top 5% candidates",
+      "Access to Top 5% candidates upon student's consent",
       "Standard candidate profiles",
       "Basic search filters",
       "Email support"
@@ -35,7 +35,7 @@ const pricingTiers: PricingTier[] = [
     description: "Perfect for scaling teams needing exclusive access to elite programmers.",
     price: "Tier 2",
     features: [
-      "Access to Top 1% candidates",
+      "Access to Top 1% candidates upon student's consent",
       "Full portfolios & competitive histories",
       "Advanced search and matching",
       "Direct interview scheduling",
@@ -49,7 +49,7 @@ const pricingTiers: PricingTier[] = [
     description: "Custom solutions for enterprises demanding the absolute best global talent.",
     price: "Tier 3",
     features: [
-      "Access to Top 0.1% candidates (Grandmasters)",
+      "Access to Top 0.1% candidates upon student's consent",
       "Dedicated talent acquisition manager",
       "Custom assessment integration",
       "White-glove onboarding",

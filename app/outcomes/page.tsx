@@ -11,24 +11,26 @@ const firmData = [
     firm: "Optiver",
     imgSrc: "https://iicpc.com/optiver.png",
     excerpts: [
-      <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">Multiple</span> Full-Time and Intern offers extended</>
+      <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">10+</span> Internship roles offers offered</>,
+      <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">60+</span> students in Future Focus program were from IICPC</>
     ],
     overview: [
-      "Across CodeFest & QuantFest 2025, more than 25 Full-Time and Intern offers were extended to participants."
+      "Across CodeFest & QuantFest 2025, 10+ Internship offers were extended to participants.",
+      "In the complete Future Focus program cohort more than 60 students were from IICPC"
     ]
   },
   {
     firm: "Jane Street",
     imgSrc: "https://iicpc.com/Jane%20street_logo_horizontal_black_registered.png",
     excerpts: [
-      <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">25 of 30</span> Indian selects were from IICPC</>,
+      <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">25 of 30</span> Indian selects for Jane Street SEE program were from IICPC</>,
       <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">12 Finalists</span> reached the 7th interview round</>,
       <><span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">100%</span> of the internship offers in India went to IICPC Students</>
     ],
     overview: [
-      "In the Second Year SEE Program, 13 out of 25 Indian selects were from IICPC.",
+      "In the Second Year SEE Program, 25 out of 30 Indian selects were from IICPC.",
       "12 Finalists successfully reached the 7th interview round.",
-      "Of the 5 internship offers Jane Street made in India this year, 3 went to CodeFest finalists and 2 to regionalists with IICPC establisshin 100% dominance ."
+      "Of the 5 internship offers Jane Street made in India this year, 3 went to CodeFest finalists and 2 to regionalists with IICPC establishing 100% dominance ."
     ]
   },
   {
@@ -53,7 +55,7 @@ const firmData = [
     ],
     overview: [
       "In the IMC Launchpad program, 35 out of 50 students selected were from CodeFest'26.",
-      "Aditya Busa received a full-time offer after participating in QuantFest."
+      "The 5 IICPC students who got full-time offers from IMC were from the following colleges : IIT Indore , IIT Bombay , DJSCE , Manipal Institute of Technology and NITK"
     ]
   },
   {
@@ -97,6 +99,16 @@ const firmData = [
     ],
     overview: [
       "A Full-Time offer was extended to an outstanding participant during QuantFest 2025."
+    ]
+  },
+  {
+    firm: "Rubriks",
+    imgSrc: "https://iicpc.com/rubrik_horizontal_gradient_logo.png",
+    excerpts: [
+      <> <span className="text-[#0056D2] font-medium bg-[#0056D2]/10 px-1.5 py-0.5">5</span> Finalist of CodeFest'26, 5 students secured internship offers from Rubriks </>
+    ],
+    overview: [
+      "Out of the 75 finalist of CodeFest'26, 5 students secured internship offers from Rubriks"
     ]
   }
 ];

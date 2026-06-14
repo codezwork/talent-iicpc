@@ -16,6 +16,7 @@ const ENTRY_IDS = {
   associatedPast: "entry.1877026626",
   location: "entry.182373166",
   state: "entry.526321032",
+  role: "entry.1907364360",
   email: "entry.661442456",
   contactNumber: "entry.801602161",
   remarks: "entry.1956072292",
@@ -67,6 +68,7 @@ export default function RegisterPage() {
     firstName: "",
     lastName: "",
     company: "",
+    role: "",
     email: "",
     contactNumber: "",
     hireFor: "",
@@ -95,6 +97,7 @@ export default function RegisterPage() {
     payload.append(ENTRY_IDS.firstName, formData.firstName);
     payload.append(ENTRY_IDS.lastName, formData.lastName);
     payload.append(ENTRY_IDS.company, formData.company);
+    payload.append(ENTRY_IDS.role, formData.role);
     payload.append(ENTRY_IDS.email, formData.email);
     payload.append(ENTRY_IDS.contactNumber, formData.contactNumber);
     payload.append(ENTRY_IDS.hireFor, formData.hireFor);
@@ -200,6 +203,23 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="bg-white border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:border-[#0056D2] focus:ring-1 focus:ring-[#0056D2] transition-colors"
                   placeholder="Acme Corp"
+                />
+              </div>
+
+              {/* Role */}
+              <div className="flex flex-col gap-2">
+                <label htmlFor="role" className="text-xs uppercase tracking-widest text-slate-500 font-medium">
+                  Your Role in Firm/Company
+                </label>
+                <input 
+                  type="text" 
+                  id="role"
+                  name="role"
+                  required
+                  value={formData.role}
+                  onChange={handleChange}
+                  className="bg-white border border-slate-300 px-4 py-3 text-sm focus:outline-none focus:border-[#0056D2] focus:ring-1 focus:ring-[#0056D2] transition-colors"
+                  placeholder="e.g. Recruiter, Engineering Manager"
                 />
               </div>
 

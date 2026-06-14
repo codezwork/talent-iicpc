@@ -38,8 +38,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-slate-900 uppercase tracking-widest mb-1">Email Us</h3>
-                      <p className="text-slate-600">support@iicpc.com</p>
-                      <p className="text-slate-600">partnerships@iicpc.com</p>
+                      <p className="text-slate-600">info@iicpc.com</p>
+                      <p className="text-slate-600">dikshansh.raipure@iicpc.com</p>
                     </div>
                   </div>
                   
@@ -49,8 +49,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-slate-900 uppercase tracking-widest mb-1">Headquarters</h3>
-                      <p className="text-slate-600">IICPC Talent Hub</p>
-                      <p className="text-slate-600">New Delhi, India</p>
+                      <p className="text-slate-600">1st floor, No.87, 4th Cross St,</p>
+                      <p className="text-slate-600">Phase-1, Thirumalai Nagar,</p>
+                      <p className="text-slate-600">Perungudi, Chennai, Tamil Nadu, India</p>
                     </div>
                   </div>
                   
@@ -60,7 +61,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-slate-900 uppercase tracking-widest mb-1">Call Us</h3>
-                      <p className="text-slate-600">+91 (123) 456-7890</p>
+                      <p className="text-slate-600">+91 99345 08942</p>
                     </div>
                   </div>
                 </div>

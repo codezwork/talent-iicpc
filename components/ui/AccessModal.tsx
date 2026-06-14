@@ -8,8 +8,9 @@ const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSexIZMU
 const ENTRY_IDS = {
   firstName: "entry.313568250", 
   lastName: "entry.177836635",
-  email: "entry.661442456",
   company: "entry.617121879",
+  role: "entry.1907364360",
+  email: "entry.661442456",
 };
 
 interface AccessModalProps {
@@ -19,8 +20,8 @@ interface AccessModalProps {
 
 export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", company: "" });
-  const [errors, setErrors] = useState({ firstName: false, lastName: false, email: false, company: false });
+  const [formData, setFormData] = useState({ firstName: "", lastName: "", company: "", role: "", email: "" });
+  const [errors, setErrors] = useState({ firstName: false, lastName: false, company: false, role: false, email: false });
 
   if (!isOpen) return null;
 
@@ -38,8 +39,9 @@ export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
     const newErrors = {
       firstName: !formData.firstName.trim(),
       lastName: !formData.lastName.trim(),
-      email: !formData.email.trim(),
       company: !formData.company.trim(),
+      role: !formData.role.trim(),
+      email: !formData.email.trim(),
     };
 
     setErrors(newErrors);
@@ -51,8 +53,9 @@ export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
     const payload = new URLSearchParams();
     payload.append(ENTRY_IDS.firstName, formData.firstName);
     payload.append(ENTRY_IDS.lastName, formData.lastName);
-    payload.append(ENTRY_IDS.email, formData.email);
     payload.append(ENTRY_IDS.company, formData.company);
+    payload.append(ENTRY_IDS.role, formData.role);
+    payload.append(ENTRY_IDS.email, formData.email);
 
     try {
       await fetch(GOOGLE_FORM_ACTION_URL, {
@@ -75,7 +78,7 @@ export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
     setTimeout(() => {
       if (status !== "success") {
         setStatus("idle");
-        setErrors({ firstName: false, lastName: false, email: false, company: false });
+        setErrors({ firstName: false, lastName: false, company: false, role: false, email: false });
       }
     }, 300);
   };
@@ -122,14 +125,6 @@ export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
               />
             </div>
             <input 
-              type="email" 
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="WORK EMAIL" 
-              className={`w-full h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors rounded-none ${errors.email ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
-            />
-            <input 
               type="text" 
               name="company"
               value={formData.company}
@@ -137,7 +132,23 @@ export default function AccessModal({ isOpen, onClose }: AccessModalProps) {
               placeholder="COMPANY NAME" 
               className={`w-full h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors rounded-none ${errors.company ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
             />
-            
+            <input 
+              type="text" 
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
+              placeholder="YOUR ROLE" 
+              className={`w-full h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors rounded-none ${errors.role ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
+            />
+            <input 
+              type="email" 
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="WORK EMAIL" 
+              className={`w-full h-14 bg-white border px-4 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0056D2] transition-colors rounded-none ${errors.email ? 'border-red-500 bg-red-50' : 'border-slate-200'}`}
+            />
+
             {hasErrors && (
               <div className="text-red-500 text-sm font-medium text-left">
                 Please fill out all highlighted fields before submitting.

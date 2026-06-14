@@ -5,16 +5,15 @@ import gsap from "gsap";
 import { useRef } from "react";
 
 const sponsors = [
-  { name: "Optiver", yearsPartnered: 1, quote: "Top 1% problem solvers.", imgSrc: "https://iicpc.com/optiver.png" },
-  { name: "Jane Street", yearsPartnered: 2, quote: "Exceptional quantitative skills.", imgSrc: "https://iicpc.com/Jane%20street_logo_horizontal_black_registered.png" },
-  { name: "Tower Research", yearsPartnered: 1, quote: "High signal, zero noise.", imgSrc: "https://iicpc.com/Tower_Research_Capital_Logo.png" },
-  { name: "HRT", yearsPartnered: 2, quote: "Our primary hiring funnel.", imgSrc: "https://iicpc.com/HRT_logo_resized.png" },
-  { name: "D. E. Shaw India", yearsPartnered: 2, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/de-shaw-logo.png" },
-  { name: "IMC Trading", yearsPartnered: 1, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/imc_logo_single_color.png" },
-  { name: "Citadel | Citadel Securities", yearsPartnered: 2, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/Citadel_CSEC_Dual_Logo_Stacked%20(2).png" },
-  { name: "Jump Trading", yearsPartnered: 2, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/jump-logo-withbg.png" },
-  { name: "Millennium", yearsPartnered: 1, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/m-Logo.png" },
-  { name: "Rubrik", yearsPartnered: 1, quote: "Elite technical talent.", imgSrc: "https://iicpc.com/rubrik_horizontal_gradient_logo.png" },
+  { name: "Optiver", yearsPartnered: 1, imgSrc: "https://iicpc.com/optiver.png" },
+  { name: "Jane Street", yearsPartnered: 2, imgSrc: "https://iicpc.com/Jane%20street_logo_horizontal_black_registered.png" },
+  { name: "Tower Research", yearsPartnered: 1, imgSrc: "https://iicpc.com/Tower_Research_Capital_Logo.png" },
+  { name: "HRT", yearsPartnered: 2, imgSrc: "https://iicpc.com/HRT_logo_resized.png" },
+  { name: "IMC Trading", yearsPartnered: 1, imgSrc: "https://iicpc.com/imc_logo_single_color.png" },
+  { name: "Citadel | Citadel Securities", yearsPartnered: 2, imgSrc: "https://iicpc.com/Citadel_CSEC_Dual_Logo_Stacked%20(2).png" },
+  { name: "Jump Trading", yearsPartnered: 2, imgSrc: "https://iicpc.com/jump-logo-withbg.png" },
+  { name: "Millennium", yearsPartnered: 1, imgSrc: "https://iicpc.com/m-Logo.png" },
+  { name: "Rubrik", yearsPartnered: 1, imgSrc: "https://iicpc.com/rubrik_horizontal_gradient_logo.png" },
 ];
 
 export default function SponsorWall() {
@@ -75,7 +74,6 @@ export default function SponsorWall() {
                 <div className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2">
                   Partnered for {sponsor.yearsPartnered} {sponsor.yearsPartnered === 1 ? 'year' : 'years'}
                 </div>
-                <div className="text-lg italic text-slate-600">"{sponsor.quote}"</div>
               </div>
             </div>
           ))}

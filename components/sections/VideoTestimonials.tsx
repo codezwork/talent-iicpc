@@ -25,7 +25,7 @@ const testimonials = [
     name: "Teetat",
     cfRank: "International Grandmaster",
     event: "IICPC CodeFest'26 Runner Up",
-    achievement: "Quant Researcher @ Jane Street",
+    achievement: "",
   },
   {
     id: 3,
