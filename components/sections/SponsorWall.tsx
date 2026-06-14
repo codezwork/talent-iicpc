@@ -66,7 +66,8 @@ export default function SponsorWall() {
               <div className="mb-8 h-12 flex items-center justify-start">
                 <img 
                   src={sponsor.imgSrc} 
-                  alt={`${sponsor.name} logo`} 
+                  alt={`${sponsor.name} — Hiring Partner of IICPC Talents`} 
+                  loading="lazy"
                   className="max-h-full max-w-[180px] object-contain"
                 />
               </div>

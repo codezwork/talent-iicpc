@@ -118,6 +118,7 @@ export default function Home() {
 
   return (
     <main ref={containerRef} className="relative w-full bg-white text-slate-900 selection:bg-[#0056D2] selection:text-white">
+      <h1 className="sr-only">IICPC Talents Portal — Competitive Programming & Quant Finance Programs for Top Engineering Students</h1>
       <Header />
       {/* Fixed 3D Canvas Background */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black">

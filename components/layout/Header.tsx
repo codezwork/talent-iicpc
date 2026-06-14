@@ -11,8 +11,9 @@ export default function Header() {
 
   // Define navigation routes
   const navLinks = [
-    { name: "Talent", href: "/" },
+    { name: "Home", href: "/" },
     { name: "Outcomes", href: "/outcomes" },
+    { name: "Register", href: "/register" },
   ];
 
   return (
@@ -21,7 +22,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
           <img 
             src="/iicpc.png" 
-            alt="IICPC Logo" 
+            alt="IICPC Talents Portal Logo" 
             className="w-10 h-10 md:w-12 md:h-12 object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-200" 
           />
           <span className="font-light uppercase text-sm md:text-xl">

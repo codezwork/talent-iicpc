@@ -8,39 +8,48 @@ const YOUTUBE_URL_1 = "https://www.youtube-nocookie.com/embed/RKXJdB6Vzps?si=BVB
 const YOUTUBE_URL_2 = "https://www.youtube-nocookie.com/embed/8Grk0fA1A_s?si=Jta5EP5CT4JAwFCl&amp;start=1&enablejsapi=1";
 const YOUTUBE_URL_3 = "https://www.youtube-nocookie.com/embed/vSTQcIzM55s?si=v_usr_ofnc-UD68b&amp;start=2&enablejsapi=1";
 const YOUTUBE_URL_4 = "https://www.youtube-nocookie.com/embed/uR7IMgwQNtU?si=zWFhH0c7ANm21SoR&amp;start=2&enablejsapi=1";
+const YOUTUBE_URL_5 = "https://www.youtube-nocookie.com/embed/NPQaGVBFQ_w?si=v45LjIAxKkz2UliF&amp;start=2&enablejsapi=1";
 
 const testimonials = [
   {
     id: 1,
     videoSrc: YOUTUBE_URL_1,
     name: "Yuto Watanabe",
-    cfRank: "Candidate Master",
+    cfRank: "Legendary Grandmaster",
     event: "IICPC CodeFest'26 Winner",
-    achievement: "SDE Intern @ Optiver",
+    achievement: "Intern @ Jump Trading",
   },
   {
     id: 2,
     videoSrc: YOUTUBE_URL_2,
     name: "Teetat",
-    cfRank: "Master",
-    event: "IICPC QunatFest'25 Winner",
+    cfRank: "International Grandmaster",
+    event: "IICPC CodeFest'26 Runner Up",
     achievement: "Quant Researcher @ Jane Street",
   },
   {
     id: 3,
     videoSrc: YOUTUBE_URL_3,
     name: "Sushil",
-    cfRank: "Expert",
-    event: "IICPC Regional 2024",
-    achievement: "Software Engineer @ Google",
+    cfRank: "Grandmaster",
+    event: "CodeFest'26 2nd Runner Up",
+    achievement: "Intern @ HRT",
   },
   {
     id: 4,
     videoSrc: YOUTUBE_URL_4,
     name: "Shreyan Ray",
-    cfRank: "Grandmaster",
-    event: "IICPC Finals 2026",
-    achievement: "Trading Analyst @ Citadel",
+    cfRank: "Legendary Grandmaster",
+    event: "IICPC QunatFest'25 Winner",
+    achievement: "Intern @ Jane Street",
+  },
+  {
+    id: 5,
+    videoSrc: YOUTUBE_URL_5,
+    name: "Maksim Shevkoplias",
+    cfRank: "International Grandmaster",
+    event: "CodeFest'26 Finalist",
+    achievement: "Intern @ JETBRAINS",
   },
 ];
 

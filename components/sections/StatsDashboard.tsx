@@ -39,8 +39,8 @@ export default function StatsDashboard() {
     <section ref={containerRef} className="py-16 md:py-24 px-6 md:px-12 bg-white text-slate-900 border-b border-slate-200">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard target="180" suffix="+" label="Students in Quant Bootcamps" />
-        <StatCard target="94" suffix="%" label="finalists in quant bootcamps" />
-        <StatCard target="50" suffix="+" label="Quant Interns" />
+        <StatCard target="90" suffix="%" label="finalists in bootcamps" />
+        <StatCard target="50" suffix="+" label="Software + Quant Interns" />
       </div>
     </section>
   );

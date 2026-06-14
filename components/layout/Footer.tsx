@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col gap-6 max-w-sm">
             <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-              <img src="/iicpc.png" alt="IICPC Logo" className="w-16 h-16 object-contain" />
+              <img src="/iicpc.png" alt="IICPC Talents Portal Logo" loading="lazy" className="w-16 h-16 object-contain" />
               <div className="flex flex-col">
                 <span className="font-light uppercase tracking-tighter text-3xl">
                   IICPC Talent
@@ -33,14 +33,14 @@ export default function Footer() {
               <div className="font-bold text-white mb-2">Portal</div>
               <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Talent Login</Link>
               <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Employer Login</Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Pricing</Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200">Pricing</Link>
             </div>
             
             <div className="flex flex-col gap-4">
               <div className="font-bold text-white mb-2">Legal</div>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Terms of Service</Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Contact</Link>
+              <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</Link>
+              <Link href="/terms" className="text-gray-300 hover:text-white transition-colors duration-200">Terms of Service</Link>
+              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200">Contact</Link>
             </div>
           </div>
         </div>

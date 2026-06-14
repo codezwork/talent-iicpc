@@ -7,13 +7,13 @@ import gsap from "gsap";
 
 const data = {
   internship: [
-    { firm: "D. E. Shaw India", code: 15, quant: 10 },
+    { firm: "Jane Street", code: 4, quant: 1 },
     { firm: "Tower Research", code: 3, quant: 0 },
+    { firm: "HRT", code: 1, quant: 2 },
     { firm: "Citadel", code: 2, quant: 0 },
-    { firm: "Jane Street", code: 1, quant: 0 },
-    { firm: "HRT", code: 1, quant: 0 },
   ],
   bootcamps: [
+    { firm: "Optiver", code: 48, quant: 26 },
     { firm: "IMC Trading", code: 35, quant: 0 },
     { firm: "HRT", code: 14, quant: 0 },
     { firm: "Jane Street", code: 13, quant: 0 },
@@ -64,7 +64,7 @@ export default function PlacementOutcomes() {
               onClick={() => setActiveTab("internship")}
               className={cn(
                 "flex-1 py-3 text-xs md:text-sm uppercase tracking-wider font-medium transition-colors",
-                activeTab === "internship" ? "bg-white text-[#0056D2] shadow-sm" : "text-slate-500 hover:text-slate-900"
+                activeTab === "internship" ? "text-white bg-[#0056D2] shadow-sm" : "text-slate-500 hover:text-slate-900"
               )}
             >
               Internship
@@ -73,7 +73,7 @@ export default function PlacementOutcomes() {
               onClick={() => setActiveTab("bootcamps")}
               className={cn(
                 "flex-1 py-3 text-xs md:text-sm uppercase tracking-wider font-medium transition-colors",
-                activeTab === "bootcamps" ? "bg-white text-[#0056D2] shadow-sm" : "text-slate-500 hover:text-slate-900"
+                activeTab === "bootcamps" ? "text-white bg-[#0056D2] shadow-sm" : "text-slate-500 hover:text-slate-900"
               )}
             >
               Bootcamps
