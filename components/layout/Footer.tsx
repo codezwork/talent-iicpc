@@ -30,10 +30,11 @@ export default function Footer() {
           {/* Links */}
           <div className="flex gap-16 md:gap-24 text-sm">
             <div className="flex flex-col gap-4">
-              <div className="font-bold text-white mb-2">Portal</div>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Talent Login</Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Employer Login</Link>
-              <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200">Pricing</Link>
+              <div className="font-bold text-white mb-2">More from IICPC</div>
+              <Link href="https://iicpc.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200">IICPC</Link>
+              <Link href="https://codefest.iicpc.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200">CodeFest</Link>
+              <Link href="https://quantfest.iicpc.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200">QuantFest</Link>
+              <Link href="https://delta.iicpc.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200">DELTA</Link>
             </div>
             
             <div className="flex flex-col gap-4">
@@ -41,6 +42,7 @@ export default function Footer() {
               <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</Link>
               <Link href="/terms" className="text-gray-300 hover:text-white transition-colors duration-200">Terms of Service</Link>
               <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200">Contact</Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200">Pricing</Link>
             </div>
           </div>
         </div>

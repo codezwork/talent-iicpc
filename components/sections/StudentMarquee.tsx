@@ -5,11 +5,12 @@ import gsap from "gsap";
 import { useRef } from "react";
 
 const testimonials = [
-  { name: "Vikram Singh", rank: "Candidate Master", role: "SWE Intern @ Optiver", quote: "The problem sets were perfectly calibrated to what top prop shops ask in their final rounds." },
-  { name: "Ananya Rao", rank: "Master", role: "Quant @ Jane Street", quote: "Competing at IICPC gave me the exact mental framework needed to clear my quantitative interviews." },
-  { name: "Rohan Desai", rank: "Expert", role: "SWE @ Google", quote: "The environment is intense, but the post-contest discussions are where the real learning happens." },
-  { name: "Kriti Sharma", rank: "Grandmaster", role: "Trader @ Citadel", quote: "Unparalleled talent pool. It's the best networking event for competitive programmers in the country." },
-  { name: "Arjun Reddy", rank: "Specialist", role: "Intern @ Tower Research", quote: "I was struggling with DP until I attended the upsolving sessions. Totally changed my perspective." },
+  { name: "Naren Sai", rank: "CodeFest'26 Finalist", role: "Intern @ IMC Trading", quote: "Through direct networking and interview opportunities, my competitive programming experience translated into a concrete career opportunity. This is what makes IICPC unique among competitions." },
+  { name: "Vijay Balaji", rank: "CodeFest'26 Finalist", role: "Intern @ Jane Street", quote: "The codefest finals helped me in many ways including and not limited to interacting with some of the best minds of India as well interacting with a lot of full timers and had the opportunity to pick their brain to better understand the finance industry to some extent." },
+  { name: "Tanish Sunilkumar", rank: "CF'25 Finalist & CF'26 Regionalist", role: "Intern @ Rubriks", quote: "Quite frankly, it is unheard of for someone from my college to get a chance with companies like Rubriks and IMC. I think IICPC is the only org in India which can give this kind of exposure to someone from a non-IIT tier college." },
+  { name: "Videep Reddy", rank: "CodeFest'26 Finalist", role: "Intern @ Jane Street", quote: "An excellent opportunity to gain exposure to leading HFT firms. Many of the fellow participants, including myself, are now interning or working at top HFT firms, making the network and connections you build through the program particularly valuable." },
+  { name: "Pulkit Gupta", rank: "CodeFest'26 Finalist", role: "Intern @ IMC Trading", quote: "The events of IICPC felt very meritocratic and helped me get more exposure and opportunities to go to bootcamps for different firms which ultimately helped me a lot in my internship journey." },
+  { name: "Sushil Raja", rank: "CodeFest'26 2nd Runner Up", role: "Bootcamp @ Jump", quote: "IICPC Served as the bridge between bright students across the country and recruiters from top global firms, creating opportunities that might otherwise never have existed." },
 ];
 
 export default function StudentMarquee() {
