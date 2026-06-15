@@ -1,12 +1,5 @@
-https://docs.google.com/forms/d/e/1FAIpQLSexIZMULh3jmwftUBz3ceIEeI14wcAG-TGYSwtmRTaFaKF3Jw/viewform?usp=pp_url&
-entry.313568250=dddd&
-entry.177836635=shevkoplias&
-entry.617121879=mamba&
-entry.837645235=intern&
-entry.1877026626=yes&
-entry.182373166=india&
-entry.526321032=USA&
-entry.1907364360=ceo&
-entry.661442456=dikshansh.raipure@iicpc.com&
-entry.801602161=987635987&
-entry.1956072292=great
+https://docs.google.com/forms/d/e/1FAIpQLSfGzpo0hwkE90hzqmS2AHV42lP1GpVL5zB8-RcoDi4UaZ72Cg/viewform?usp=pp_url&
+entry.1882227276=Dikshansh&
+entry.615139776=Raipure&
+entry.110994353=saef@mamba.site&
+entry.125110913=hello
