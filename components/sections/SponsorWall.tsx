@@ -52,9 +52,6 @@ export default function SponsorWall() {
       <div className="text-center mb-16 px-6">
         <p className="text-[10px] uppercase tracking-[0.15em] text-[#0056D2] font-medium mb-2">Partners</p>
         <h2 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Elite Firms Trust Us</h2>
-        <p className="text-xl font-medium text-[#0056D2] tracking-wide">
-          9 out of 10 sponsors from Year 1 returned in Year 2.
-        </p>
       </div>
 
       <div className="w-full relative flex whitespace-nowrap">
