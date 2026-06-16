@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -32,7 +33,7 @@ export default function PrivacyPolicyPage() {
 
             <h3>1. Information We Collect</h3>
             <p>
-              We collect information that you provide directly to us when creating an account, building your talent profile, or posting a job. This includes:
+              We collect information that you provide directly to us when opting in for hiring procedures moderated by IICPC, building your talent profile, or posting a job. This includes:
             </p>
             <ul>
               <li><strong>Personal Information:</strong> Name, email address, phone number, and professional credentials.</li>
@@ -53,22 +54,22 @@ export default function PrivacyPolicyPage() {
 
             <h3>3. Information Sharing and Disclosure</h3>
             <p>
-              We do not sell your personal data. Your profile information is only shared with verified employers on the IICPC Talent platform when you explicitly opt-in or apply for a role. We may also share information with trusted third-party service providers who assist us in operating our platform, subject to strict confidentiality agreements.
+              Your personal data remains safe with us and is shared with only authorized entities including the companies who have opted to recruit through IICPC Talent. Your profile information is only shared with verified employers on the IICPC Talent platform with your consent. We may also share information with trusted third-party service providers who assist us in operating our platform, subject to strict confidentiality agreements.
             </p>
 
             <h3>4. Data Security</h3>
             <p>
-              We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+              We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Our team monitors all the activities online 24*7 and tries best to keep the portal secure. However, no method of transmission over the internet or electronic storage is 100% secure.
             </p>
 
             <h3>5. Your Rights</h3>
             <p>
-              You have the right to access, correct, or delete your personal data at any time. You can manage your preferences through your account settings or by contacting our support team.
+              You have the right to access, correct, or delete your personal data at any time. You can manage / correct your profile by <Link href="/contact" className="text-[#0056D2] hover:underline">contacting our support team</Link>.
             </p>
 
             <h3>6. Contact Us</h3>
             <p>
-              If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:privacy@iicpc.com">privacy@iicpc.com</a>.
+              If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:info@iicpc.com" className="text-[#0056D2] hover:underline">info@iicpc.com</a>.
             </p>
           </div>
         </div>

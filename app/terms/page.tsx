@@ -62,7 +62,7 @@ export default function TermsOfServicePage() {
 
             <h3>7. Modifications to the Service</h3>
             <p>
-              We reserve the right to modify or discontinue, temporarily or permanently, the service (or any part thereof) with or without notice at any time. We shall not be liable to you or to any third party for any modification, suspension, or discontinuance of the service.
+              We reserve the right to modify or discontinue, temporarily or permanently, the service (or any part thereof) with or without notice at any time.
             </p>
 
             <h3>8. Governing Law</h3>
@@ -72,7 +72,7 @@ export default function TermsOfServicePage() {
 
             <h3>9. Contact Us</h3>
             <p>
-              If you have any questions about these Terms, please contact us at <a href="mailto:legal@iicpc.com">legal@iicpc.com</a>.
+              If you have any questions about these Terms, please contact us at <a href="mailto:info@iicpc.com" className="text-[#0056D2] hover:underline">info@iicpc.com</a>.
             </p>
           </div>
         </div>
